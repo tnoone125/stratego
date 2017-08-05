@@ -1,0 +1,25 @@
+System Description:
+
+We will implement the board game Stratego. The main features will be a one
+player game (vs. the computer) and a two-person mode where each player hands off
+the computer to the other player after the end of their turn.]
+
+Architecture: We will use a shared data architecture. Each of the players 
+has access to and edits the shared game board (which starts as a 2D array
+all containing None.)
+
+System Design:
+
+Module Design:
+
+Data: The primary data structure we will use is a full_piece option array array,
+which is a 2D array where each position of the array refers to a full_piece
+(or lack thereof). The primary functions move & attack each return updated boards.
+
+External dependencies:
+
+Testing plan: We may use unit tests to assure that in-game functionality works
+properly (each piece correctly defeats or is defeated by another piece). 
+After that, we will test the actual game engine simply by playing it. Once we
+have verified that it works, we will add some corner case gameplay to unit 
+tests.
